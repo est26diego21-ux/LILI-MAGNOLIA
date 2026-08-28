@@ -1,6 +1,7 @@
 import './Navbar.css';
 import { NavLink } from 'react-router';
 import { useCarrito } from '../../../hooks/useCarrito';
+import { memo } from 'react';
 const precargarCatalogo = () => import('../../../pages/Catalogo/Catalogo');
 const precargarCarrito = () => import('../../../pages/Carrito/Carrito');
 const precargarPerfil = () => import('../../../pages/Perfil/Perfil');
@@ -20,4 +21,4 @@ function Navbar (){
     );
 }
 
-export default Navbar;
+export default memo(Navbar);
