@@ -48,11 +48,11 @@ const categorias = [
   },
 ];
 
-function Home() {
-
-   useDocumentTitle(
+useDocumentTitle(
         carrito.length === 0 ? 'LILI & MAGNOLIA' : `Carrito (${totalItems}) · LILI & MAGNOLIA`
     );
+
+function Home() {
   const { productos, cargando, error } = useProducto();
   const { agregarAlCarrito } = useCarrito();
 
