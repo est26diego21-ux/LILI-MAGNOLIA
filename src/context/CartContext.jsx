@@ -27,7 +27,7 @@ export function CartProvider({ children }){
         localStorage.setItem("carrito", JSON.stringify(carrito));
     }, [carrito]);
 
-    useDocumentTitle(carrito.length === 0 ? "LILI & MAGNOLIA" : `LILI & MAGNOLIA(${carrito.length})`);
+    useDocumentTitle(carrito.length === 0 ? "LILI & MAGNOLIA" : `LILI & MAGNOLIA (${carrito.length})`);
     
     const valor = useMemo(() => ({
         carrito,

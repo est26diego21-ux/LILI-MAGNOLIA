@@ -8,7 +8,9 @@ function Perfil() {
         telefono: '449 548 06 51',
     };
 
-    useDocumentTitle(`${usuario.nombre} · LILI & MAGNOLIA`);
+     useDocumentTitle(
+        carrito.length === 0 ? 'LILI & MAGNOLIA' : `Carrito (${totalItems}) · LILI & MAGNOLIA`
+    );
 
     const iniciales = usuario.nombre
         .split(' ')

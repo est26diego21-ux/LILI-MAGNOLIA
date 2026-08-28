@@ -18,7 +18,7 @@ function Carrito() {
     } = useCarrito();
 
     useDocumentTitle(
-        carrito.length === 0 ? 'Tu carrito · LILI & MAGNOLIA' : `Carrito (${totalItems}) · LILI & MAGNOLIA`
+        carrito.length === 0 ? 'LILI & MAGNOLIA' : `Carrito (${totalItems}) · LILI & MAGNOLIA`
     );
 
     if (carrito.length === 0) {
