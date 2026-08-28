@@ -140,11 +140,9 @@ function Carrito() {
                         <span>{formatoPrecio(totalPrecio)}</span>
                     </div>
 
-                    <Boton
-                        texto="Finalizar compra"
-                        variante="primary"
-                        onClick={() => alert('Checkout - PROXIMAMENTE')}
-                    />
+                    <Link to="/checkout" className="carrito__CHECK">
+                        FINALIZAR COMPRA 
+                    </Link>
 
                     <Link to="/catalogo" className="carrito__seguir">
                         ← Seguir comprando

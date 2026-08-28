@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router';
 const Home = lazy(() => import('./pages/Home/Home.jsx'));
 const Catalogo = lazy(() => import('./pages/Catalogo/Catalogo.jsx'));
 const Carrito = lazy(() => import('./pages/Carrito/Carrito.jsx'));
+const Checkout = lazy(() => import('./pages/checkout/Checkout.jsx'));
 const NotFound = lazy(() => import('./pages/NotFound/NotFound.jsx'));
 const Perfil = lazy(() => import('./pages/Perfil/Perfil.jsx'));
 const ProductoDetalle = lazy(() => import('./pages/ProductoDetalle/ProductoDetalle.jsx'));
@@ -22,6 +23,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/catalogo' element={<Catalogo/>}/>
         <Route path='/carrito' element={<Carrito/>}/>
+        <Route path='/checkout' element={<Checkout/>}/>
         <Route path='/perfil' element={<Perfil/>}/>
         <Route path='/producto/:id' element={<ProductoDetalle/>}/>
         <Route path='*' element={<NotFound/>}/>

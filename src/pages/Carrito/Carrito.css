@@ -232,6 +232,44 @@
   color: var(--color-text);
 }
 
+.carrito__CHECK {
+  display: inline-block;
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  background-color: #c58a6a;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.carrito__CHECK:hover {
+  background: #a86f52;
+  transform: translateY(-2px);
+}
+
+
+
+.home-btn {
+  display: inline-block;
+  padding: 14px 30px;
+  border-radius: 999px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+.home-btn--primary {
+  background: var(--home-accent);
+  color: #fff;
+}
+
+
+
+
+
 .carrito__seguir {
   text-align: center;
   font-size: var(--text-sm);
