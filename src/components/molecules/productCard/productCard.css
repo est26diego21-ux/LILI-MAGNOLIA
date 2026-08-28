@@ -1,0 +1,91 @@
+/* ============================================
+   productCard.css — Tarjeta de producto
+   ============================================ */
+
+.product-card {
+  background-color: var(--color-surface, #fffdf9);
+  border: 1px solid var(--color-border, #e6ddcd);
+  border-radius: var(--radius-lg, 20px);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm, 0 8px 40px rgba(109, 127, 110, 0.1));
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 25px rgb(200,120,0, 0.5);
+}
+
+/* Imagen del producto */
+.product-image {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+/* Enlace que envuelve imagen + nombre */
+.producto-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.producto-link:hover .product-name {
+  color: var(--color-accent, #c58a6a);
+}
+
+/* Cuerpo de la tarjeta */
+.product-body {
+  padding: 0 16px 16px;
+}
+
+.product-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-primary, #6b7f6e);
+  padding: 5px 0 0 30px;
+  margin: 0;
+}
+
+.product-size {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--color-primary, #6b7f6e);
+  padding: 5px 0 20px 15px;
+  margin: 0;
+}
+
+.product-description {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-soft, #8a8378);
+  margin-bottom: 12px;
+
+  /* Recorta a 2 líneas y agrega "..." */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  /* Reserva la altura de las 2 líneas para que todas las tarjetas queden alineadas */
+  min-height: calc(0.9rem * 1.6 * 2);
+}
+
+/* Badge de disponibilidad */
+.product-badge {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill, 999px);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: lowercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+}
+.product-badge.in-stock {
+  background: #e7ede4;
+  color: var(--color-primary-dark, #4f6152);
+}
+.product-badge.out-of-stock {
+  background: #f0e2da;
+  color: var(--color-accent-dark, #a86f52);
+}

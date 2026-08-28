@@ -1,0 +1,170 @@
+/* ============================================
+   Perfil.css — Página de perfil
+   Ubicación: src/pages/Perfil/Perfil.css
+   Usa las variables definidas en src/index.css (:root)
+   ============================================ */
+
+.perfil {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg) var(--space-2xl);
+  color: var(--color-text);
+}
+
+/* ---------- ENCABEZADO ---------- */
+.perfil__encabezado {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.perfil__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.78rem;
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.perfil__titulo {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  color: var(--color-primary-dark);
+}
+
+/* ---------- TARJETA ---------- */
+.perfil__tarjeta {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.perfil__cabecera {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: radial-gradient(
+    120% 140% at 0% 0%,
+    #efe7d8 0%,
+    var(--color-surface) 70%
+  );
+  border-bottom: 1px solid var(--color-border);
+}
+
+.perfil__avatar {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary);
+  color: var(--color-surface);
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-extra);
+  letter-spacing: 0.02em;
+}
+
+.perfil__nombre {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--color-text);
+  margin-bottom: 2px;
+}
+
+.perfil__rol {
+  font-size: var(--text-sm);
+  color: var(--color-text-soft);
+}
+
+/* ---------- DATOS ---------- */
+.perfil__datos {
+  margin: 0;
+  padding: var(--space-sm) var(--space-lg) var(--space-lg);
+}
+
+.perfil__fila {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-md);
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.perfil__fila:last-child {
+  border-bottom: none;
+}
+
+.perfil__etiqueta {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-soft);
+}
+
+.perfil__valor {
+  font-size: var(--text-base);
+  color: var(--color-text);
+  text-align: right;
+  word-break: break-word;
+}
+
+/* ---------- ACCIONES ---------- */
+.perfil__acciones {
+  display: flex;
+  gap: var(--space-sm);
+  padding: 0 var(--space-lg) var(--space-lg);
+}
+
+.perfil__boton {
+  flex: 1;
+  padding: var(--space-md) var(--space-lg);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-pill);
+  background: none;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  color: var(--color-primary-dark);
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.perfil__boton:hover {
+  background: var(--color-primary);
+  color: var(--color-surface);
+  transform: translateY(-2px);
+}
+
+.perfil__boton--acento {
+  border-color: var(--color-accent);
+  color: var(--color-accent-dark);
+}
+
+.perfil__boton--acento:hover {
+  background: var(--color-accent);
+  color: var(--color-surface);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 480px) {
+  .perfil__cabecera {
+    flex-direction: column;
+    text-align: center;
+  }
+  .perfil__fila {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xs);
+  }
+  .perfil__valor {
+    text-align: left;
+  }
+  .perfil__acciones {
+    flex-direction: column;
+  }
+}

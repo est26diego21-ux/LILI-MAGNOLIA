@@ -1,0 +1,82 @@
+/* ============================================
+   index.css — Estilos globales
+   Ubicación: src/index.css
+   Acción: REEMPLAZAR el contenido completo
+   ============================================ */
+
+  :root {
+  /* Color — tierra, salvia y arcilla */
+  --color-primary: #6b7f6e;        /* verde salvia */
+  --color-primary-dark: #4f6152;
+  --color-primary-light: #a8b8a5;
+  --color-accent: #c58a6a;         /* terracota suave (CTAs, precios) */
+  --color-accent-dark: #a86f52;
+  --color-danger: #b5654a;         /* ladrillo, no rojo chillón */
+
+  --color-text: #3d3a34;           /* marrón carbón, no negro */
+  --color-text-soft: #8a8378;
+  --color-bg: #f6f1e9;             /* crema cálido */
+  --color-surface: #fffdf9;        /* blanco roto */
+  --color-border: #e6ddcd;
+
+  /* Tipografía */
+  --font-display: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', -apple-system, 'Segoe UI', sans-serif;
+  --text-sm: 0.9rem;
+  --text-base: 1rem;
+  --text-md: 1.1rem;
+  --text-lg: 1.35rem;
+  --text-xl: 2rem;
+  --text-2xl: 2.75rem;
+  --text-hero: 3.5rem;
+  --weight-bold: 600;              /* pesos más ligeros = más calma */
+  --weight-extra: 700;
+  --leading: 1.7;
+
+  /* Espaciado — más generoso */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 28px;
+  --space-xl: 48px;
+  --space-2xl: 96px;
+
+  /* Bordes y sombras — suaves y cálidas */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 1px 4px rgba(109, 127, 110, 0.10);
+  --shadow-md: 0 8px 24px rgba(109, 127, 110, 0.12);
+  --shadow-lg: 0 20px 50px rgba(76, 97, 82, 0.16);
+
+  --ancho-contenido: 1100px;
+  --ancho-catalogo: 1200px;
+}
+
+   
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+html, body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: var(--leading);
+}
+h1, h2, h3, .home-titulo, .navbar-logo {
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.01em;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+#root {
+  min-height: 100vh;
+}

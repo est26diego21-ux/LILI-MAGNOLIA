@@ -1,0 +1,53 @@
+.boton {
+  padding: var(--space-sm) var(--space-lg);
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--text-base);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+ 
+/* Variantes de color */
+.boton.primary {
+  background-color: var(--color-accent);
+  color: white;
+}
+ 
+.boton.primary:hover {
+  background-color: var(--color-accent-dark);
+}
+ 
+.boton.secondary {
+  background-color: white;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+ 
+.boton.danger {
+  background-color: var(--color-danger);
+  color: white;
+}
+ 
+/* Tamaños */
+.boton.pequeno {
+  padding: 6px 12px;
+  font-size: 14px;
+}
+ 
+.boton.grande {
+  padding: 16px 32px;
+  font-size: 18px;
+}
+ 
+/* Estado disabled */
+.boton:disabled {
+  background-color: #999 !important;
+  color: white;
+  cursor: not-allowed;
+}
+
+.boton.activo {
+  background-color: var(--color-primary);
+  color: white;
+}
