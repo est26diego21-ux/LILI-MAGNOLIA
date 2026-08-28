@@ -49,6 +49,8 @@ const categorias = [
   },
 ];
 
+const { carrito } = useCarrito;
+
 useDocumentTitle(
         carrito.length === 0 ? 'LILI & MAGNOLIA' : `Carrito (${totalItems}) · LILI & MAGNOLIA`
     );
