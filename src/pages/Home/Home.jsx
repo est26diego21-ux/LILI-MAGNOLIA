@@ -49,15 +49,13 @@ const categorias = [
   },
 ];
 
-const { carrito } = useCarrito;
+function Home() {
+  const { productos, cargando, error } = useProducto();
+  const { carrito, agregarAlCarrito } = useCarrito();
 
 useDocumentTitle(
         carrito.length === 0 ? 'LILI & MAGNOLIA' : `Carrito (${totalItems}) · LILI & MAGNOLIA`
     );
-
-function Home() {
-  const { productos, cargando, error } = useProducto();
-  const { agregarAlCarrito } = useCarrito();
 
   const destacadas = useMemo(
     () => productos.filter((producto) => producto.stock > 0).slice(0, 3),
