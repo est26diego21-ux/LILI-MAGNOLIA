@@ -51,10 +51,10 @@ const categorias = [
 
 function Home() {
   const { productos, cargando, error } = useProducto();
-  const { carrito, totalItems, agregarAlCarrito } = useCarrito();
+  const { agregarAlCarrito } = useCarrito();
 
 useDocumentTitle(
-        carrito.length === 0 ? 'LILI & MAGNOLIA' : `Carrito (${totalItems}) · LILI & MAGNOLIA`
+  'LILI & MAGNOLIA'
     );
 
   const destacadas = useMemo(
