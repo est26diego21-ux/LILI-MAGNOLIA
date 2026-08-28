@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import ProductCard from '../../components/molecules/productCard/productCard.jsx';
 import { useProducto } from '../../hooks/useProducto.js';
 import { useCarrito } from '../../hooks/useCarrito.js';
+import useDocumentTitle from '../../hooks/useDocumentTitle.js';
 
 const aparecer = {
   hidden: { opacity: 0, y: 24 },
